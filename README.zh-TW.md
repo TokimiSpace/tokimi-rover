@@ -66,7 +66,7 @@ Tokimi Rover 是一台以 ESP32-S3 為核心的模組化 Rover 原型，整合�
 | [已知問題](KNOWN_ISSUES.md) | 安全與可靠度限制 |
 | [路線圖](ROADMAP.md) | 未來計畫；不代表現有功能 |
 | [發行檢查表](docs/RELEASE_CHECKLIST.md) | 建立公開 tag 前仍需完成的工作 |
-| [Tokimi Open Source](https://tokimispace.github.io/) | 目前與預計開源專案的雙語組織首頁 |
+| [Tokimi Open Source](https://tokimispace.github.io/?lang=zh-TW) | 目前與預計開源專案的雙語組織首頁 |
 
 所有建置與燒錄指令只放在 [docs/BUILD_AND_FLASH.md](docs/BUILD_AND_FLASH.md)，避免多份流程互相矛盾。
 

@@ -136,7 +136,7 @@ See [Hardware as built](HARDWARE_AS_BUILT.md) and the current prototype [BOM](ha
 | [Roadmap](ROADMAP.md) | Planned work, clearly separated from current features |
 | [Release checklist](docs/RELEASE_CHECKLIST.md) | Work remaining before a tagged public release |
 | [Archive provenance](docs/ARCHIVE_PROVENANCE.md) | Supplied ZIP hashes and traceability limits |
-| [Tokimi Open Source](https://tokimispace.github.io/) | Bilingual organization page for current and planned open-source projects |
+| [Tokimi Open Source](https://tokimispace.github.io/?lang=en) | Bilingual organization page for current and planned open-source projects |
 
 </details>
 
