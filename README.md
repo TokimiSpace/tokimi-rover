@@ -6,7 +6,7 @@
 
 A dual-controller ESP32-S3 rover prototype with browser teleoperation, an independent OV3660 camera node, animated OLED faces, and 32-pixel addressable lighting.
 
-[Build & flash](docs/BUILD_AND_FLASH.md) · [API](docs/CURRENT_API.md) · [Pin map](docs/CURRENT_PINMAP.md) · [Safety](docs/SAFETY.md)
+[Tokimi website](https://tokimi.space/) · [Build & flash](docs/BUILD_AND_FLASH.md) · [API](docs/CURRENT_API.md) · [Pin map](docs/CURRENT_PINMAP.md) · [Safety](docs/SAFETY.md)
 
 ![Status: audited prototype](https://img.shields.io/badge/status-audited_prototype-f59e0b?style=flat-square)
 ![Controllers: 2 × ESP32-S3](https://img.shields.io/badge/controllers-2_%C3%97_ESP32--S3-0ea5e9?style=flat-square)
@@ -154,4 +154,4 @@ This is a path-specific multi-license repository:
 
 See [LICENSES.md](LICENSES.md) for authoritative scope and official texts. Tokimi, 時見數位科技, project logos, and the “Official Tokimi Rover” designation remain separate brand assets under [TRADEMARKS.md](TRADEMARKS.md).
 
-Tokimi / 時見數位科技 welcomes collaboration on reliability, sensing, education builds, and field-robotics prototypes. Contact: `ben@tokimi.space`
+Tokimi / 時見數位科技 welcomes collaboration on reliability, sensing, education builds, and field-robotics prototypes. Learn more at [tokimi.space](https://tokimi.space/). Contact: `ben@tokimi.space`

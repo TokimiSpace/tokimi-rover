@@ -6,6 +6,8 @@
 
 Tokimi Rover 是一台以 ESP32-S3 為核心的模組化 Rover 原型，整合瀏覽器遙控、獨立攝影機節點、OLED 動畫表情與 WS2812 燈光。
 
+[Tokimi 官方網站](https://tokimi.space/) · [建置與燒錄](docs/BUILD_AND_FLASH.md) · [安全說明](docs/SAFETY.md)
+
 > **V0.1 狀態：** 原始碼與文件稽核已完成，兩個韌體專案也已從目前整理後的目錄重新乾淨建置；本次稽核**沒有重新對實車做硬體測試**。這是研究與教學用途的原型，不是量產車輛。
 
 ## 重要安全警告
@@ -99,4 +101,4 @@ CERN-OHL-W-2.0；文件與原創圖表使用 CC-BY-4.0。各路徑適用範圍�
 [LICENSES.md](LICENSES.md)。Tokimi 名稱、標誌與「Official Tokimi Rover」標示仍依
 [TRADEMARKS.md](TRADEMARKS.md) 另外管理。
 
-合作聯絡：`ben@tokimi.space`
+更多資訊請見 [Tokimi 官方網站](https://tokimi.space/)。合作聯絡：`ben@tokimi.space`
