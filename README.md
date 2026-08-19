@@ -1,10 +1,12 @@
+**Language:** **English** · [中文](README.zh-TW.md)
+
 ![Tokimi Rover — audited dual-controller ESP32-S3 prototype](media/tokimi-rover-hero.svg)
 
 # Tokimi Rover
 
 A dual-controller ESP32-S3 rover prototype with browser teleoperation, an independent OV3660 camera node, animated OLED faces, and 32-pixel addressable lighting.
 
-[繁體中文](README.zh-TW.md) · [Build & flash](docs/BUILD_AND_FLASH.md) · [API](docs/CURRENT_API.md) · [Pin map](docs/CURRENT_PINMAP.md) · [Safety](docs/SAFETY.md)
+[Build & flash](docs/BUILD_AND_FLASH.md) · [API](docs/CURRENT_API.md) · [Pin map](docs/CURRENT_PINMAP.md) · [Safety](docs/SAFETY.md)
 
 ![Status: audited prototype](https://img.shields.io/badge/status-audited_prototype-f59e0b?style=flat-square)
 ![Controllers: 2 × ESP32-S3](https://img.shields.io/badge/controllers-2_%C3%97_ESP32--S3-0ea5e9?style=flat-square)

@@ -1,3 +1,5 @@
+**語言：** [English](README.md) · **中文**
+
 ![Tokimi Rover — 已完成原始碼稽核的雙控制器 ESP32-S3 原型](media/tokimi-rover-hero.svg)
 
 # Tokimi Rover
@@ -5,8 +7,6 @@
 Tokimi Rover 是一台以 ESP32-S3 為核心的模組化 Rover 原型，整合瀏覽器遙控、獨立攝影機節點、OLED 動畫表情與 WS2812 燈光。
 
 > **V0.1 狀態：** 原始碼與文件稽核已完成，兩個韌體專案也已從目前整理後的目錄重新乾淨建置；本次稽核**沒有重新對實車做硬體測試**。這是研究與教學用途的原型，不是量產車輛。
-
-[English README](README.md)
 
 ## 重要安全警告
 
