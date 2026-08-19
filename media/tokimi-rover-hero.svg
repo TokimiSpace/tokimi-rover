@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SPDX-FileCopyrightText: 2026 Tokimi Rover contributors
+SPDX-License-Identifier: CC-BY-4.0
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="700" viewBox="0 0 1600 700" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Tokimi Rover audited ESP32-S3 prototype</title>
+  <desc id="hero-desc">A stylized, non-photographic four-wheel rover illustration with camera, OLED face, and WS2812 lighting, beside an explicit source-audited prototype label.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07101f"/>
+      <stop offset="0.52" stop-color="#0a1830"/>
+      <stop offset="1" stop-color="#08111f"/>
+    </linearGradient>
+    <radialGradient id="cyan-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#20d9ff" stop-opacity=".26"/>
+      <stop offset="1" stop-color="#20d9ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="violet-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#8b7cff" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#8b7cff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="chassis" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#223a5a"/>
+      <stop offset=".55" stop-color="#142a46"/>
+      <stop offset="1" stop-color="#0c1c32"/>
+    </linearGradient>
+    <linearGradient id="shell" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2d4d70"/>
+      <stop offset=".46" stop-color="#193554"/>
+      <stop offset="1" stop-color="#10253d"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#18395a"/>
+      <stop offset=".5" stop-color="#0b1e35"/>
+      <stop offset="1" stop-color="#07121f"/>
+    </linearGradient>
+    <linearGradient id="wheel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#243247"/>
+      <stop offset=".55" stop-color="#0c1422"/>
+      <stop offset="1" stop-color="#03070d"/>
+    </linearGradient>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M56 0H0V56" fill="none" stroke="#8aa9c9" stroke-opacity=".075" stroke-width="1"/>
+      <circle cx="0" cy="0" r="1.4" fill="#63dcff" fill-opacity=".16"/>
+    </pattern>
+    <filter id="soft-glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="tiny-glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="screen-clip">
+      <rect x="1093" y="245" width="202" height="104" rx="25"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1600" height="700" fill="url(#bg)"/>
+  <rect width="1600" height="700" fill="url(#grid)"/>
+  <ellipse cx="1240" cy="310" rx="520" ry="430" fill="url(#cyan-glow)"/>
+  <ellipse cx="370" cy="100" rx="420" ry="300" fill="url(#violet-glow)"/>
+
+  <g opacity=".62" fill="none" stroke="#49cfee">
+    <path d="M0 602C240 548 353 604 544 568S884 472 1120 520s293 31 480-20" stroke-opacity=".13" stroke-width="2"/>
+    <path d="M0 626C237 574 372 633 570 592s343-97 566-47 303 27 464-18" stroke-opacity=".08"/>
+  </g>
+
+  <!-- Editorial copy -->
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif">
+    <g transform="translate(92 82)">
+      <rect width="272" height="36" rx="18" fill="#112c43" stroke="#2ad9ff" stroke-opacity=".5"/>
+      <circle cx="21" cy="18" r="5" fill="#41e7a5" filter="url(#tiny-glow)"/>
+      <text x="38" y="23" fill="#aeeeff" font-size="14" font-weight="700" letter-spacing="1.5">SOURCE-AUDITED · BUILD-VERIFIED</text>
+    </g>
+
+    <text x="92" y="204" fill="#f1f7ff" font-size="74" font-weight="800" letter-spacing="-2.5">TOKIMI</text>
+    <text x="92" y="276" fill="#6de6ff" font-size="74" font-weight="800" letter-spacing="7">ROVER</text>
+    <rect x="93" y="305" width="115" height="4" rx="2" fill="#29d7ff"/>
+    <rect x="216" y="305" width="42" height="4" rx="2" fill="#8b7cff"/>
+
+    <text x="92" y="360" fill="#d8e7f7" font-size="24" font-weight="650" letter-spacing="1.2">AUDITED ESP32-S3 PROTOTYPE</text>
+    <text x="92" y="401" fill="#8fa8c2" font-size="18">Browser teleoperation · Independent camera node</text>
+    <text x="92" y="431" fill="#8fa8c2" font-size="18">Animated OLED face · Addressable WS2812 lighting</text>
+
+    <g transform="translate(92 484)">
+      <rect width="176" height="72" rx="14" fill="#0d1d31" stroke="#35516f"/>
+      <text x="18" y="28" fill="#6685a5" font-size="12" font-weight="700" letter-spacing="1.7">CONTROLLERS</text>
+      <text x="18" y="53" fill="#eef8ff" font-size="20" font-weight="750">2 × ESP32-S3</text>
+
+      <rect x="190" width="150" height="72" rx="14" fill="#0d1d31" stroke="#35516f"/>
+      <text x="208" y="28" fill="#6685a5" font-size="12" font-weight="700" letter-spacing="1.7">LIGHTING</text>
+      <text x="208" y="53" fill="#eef8ff" font-size="20" font-weight="750">32 LEDs</text>
+
+      <rect x="354" width="150" height="72" rx="14" fill="#0d1d31" stroke="#35516f"/>
+      <text x="372" y="28" fill="#6685a5" font-size="12" font-weight="700" letter-spacing="1.7">VISION</text>
+      <text x="372" y="53" fill="#eef8ff" font-size="20" font-weight="750">OV3660</text>
+    </g>
+
+    <g transform="translate(92 606)">
+      <path d="M0 0h18l7 7-7 7H0l7-7z" fill="#f5bd4f"/>
+      <text x="36" y="12" fill="#8fa8c2" font-size="14" font-weight="600" letter-spacing=".6">CONCEPTUAL ILLUSTRATION · NOT A PRODUCT PHOTO</text>
+    </g>
+  </g>
+
+  <!-- Rover shadow -->
+  <ellipse cx="1172" cy="591" rx="346" ry="49" fill="#000711" opacity=".78"/>
+  <ellipse cx="1172" cy="580" rx="278" ry="28" fill="#1bcaef" opacity=".11" filter="url(#soft-glow)"/>
+
+  <!-- Rover -->
+  <g>
+    <!-- Four-wheel set: rear pair sits behind the larger front pair -->
+    <g opacity=".88">
+      <ellipse cx="1042" cy="487" rx="69" ry="105" fill="url(#wheel)" stroke="#40516b" stroke-width="5"/>
+      <ellipse cx="1042" cy="487" rx="34" ry="66" fill="#07101c" stroke="#8b7cff" stroke-opacity=".32" stroke-width="3"/>
+      <ellipse cx="1302" cy="487" rx="69" ry="105" fill="url(#wheel)" stroke="#40516b" stroke-width="5"/>
+      <ellipse cx="1302" cy="487" rx="34" ry="66" fill="#07101c" stroke="#8b7cff" stroke-opacity=".32" stroke-width="3"/>
+    </g>
+    <g>
+      <ellipse cx="970" cy="501" rx="92" ry="126" fill="url(#wheel)" stroke="#40516b" stroke-width="6"/>
+      <ellipse cx="970" cy="501" rx="51" ry="82" fill="#07101c" stroke="#29d7ff" stroke-opacity=".38" stroke-width="4"/>
+      <ellipse cx="970" cy="501" rx="19" ry="37" fill="#2b4663"/>
+      <g stroke="#60738c" stroke-width="5" stroke-linecap="round" opacity=".48">
+        <path d="M925 409l22 23M906 450l29 14M900 500h34M907 551l29-14M927 592l21-23"/>
+      </g>
+    </g>
+    <g>
+      <ellipse cx="1374" cy="501" rx="92" ry="126" fill="url(#wheel)" stroke="#40516b" stroke-width="6"/>
+      <ellipse cx="1374" cy="501" rx="51" ry="82" fill="#07101c" stroke="#29d7ff" stroke-opacity=".38" stroke-width="4"/>
+      <ellipse cx="1374" cy="501" rx="19" ry="37" fill="#2b4663"/>
+      <g stroke="#60738c" stroke-width="5" stroke-linecap="round" opacity=".48">
+        <path d="M1329 409l22 23M1310 450l29 14M1304 500h34M1311 551l29-14M1331 592l21-23"/>
+      </g>
+    </g>
+
+    <!-- Axles -->
+    <path d="M950 474h446M950 528h446" stroke="#172a43" stroke-width="24"/>
+
+    <!-- Lower deck -->
+    <path d="M884 426Q897 399 935 394h477q31 3 45 32l36 94q8 25-18 38-47 23-118 25H987q-70-4-116-25-25-13-17-38z" fill="url(#chassis)" stroke="#3c5f7e" stroke-width="4"/>
+    <path d="M890 445h564" stroke="#40d9f8" stroke-opacity=".32" stroke-width="4"/>
+    <path d="M930 546h489" stroke="#06101d" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- Front WS2812 strip -->
+    <g transform="translate(972 538)" filter="url(#tiny-glow)">
+      <rect width="400" height="18" rx="9" fill="#07111f" stroke="#2c4f6c"/>
+      <g>
+        <circle cx="25" cy="9" r="5" fill="#e9fbff"/><circle cx="75" cy="9" r="5" fill="#e9fbff"/>
+        <circle cx="125" cy="9" r="5" fill="#51e4ff"/><circle cx="175" cy="9" r="5" fill="#51e4ff"/>
+        <circle cx="225" cy="9" r="5" fill="#8b7cff"/><circle cx="275" cy="9" r="5" fill="#8b7cff"/>
+        <circle cx="325" cy="9" r="5" fill="#ff5d8f"/><circle cx="375" cy="9" r="5" fill="#ff5d8f"/>
+      </g>
+    </g>
+
+    <!-- Curved upper shell -->
+    <path d="M958 407c23-117 103-194 211-204h83c77 7 138 55 165 129l31 83q7 19-11 31-36 24-98 32H997q-37-8-53-30-10-14-4-29z" fill="url(#shell)" stroke="#52718f" stroke-width="4"/>
+    <path d="M979 393c29-88 93-145 183-155h80c69 6 118 44 143 107l18 48z" fill="#1b3b5b" opacity=".76"/>
+    <path d="M1010 401c34-67 91-110 165-116h59c53 5 100 36 125 88l12 28z" fill="url(#glass)" stroke="#355978" stroke-width="3"/>
+
+    <!-- OLED face -->
+    <rect x="1077" y="229" width="234" height="137" rx="34" fill="#07101d" stroke="#60dff9" stroke-opacity=".62" stroke-width="4"/>
+    <rect x="1093" y="245" width="202" height="104" rx="25" fill="#061725"/>
+    <g clip-path="url(#screen-clip)">
+      <ellipse cx="1145" cy="296" rx="35" ry="24" fill="#53e4ff" filter="url(#tiny-glow)"/>
+      <ellipse cx="1243" cy="296" rx="35" ry="24" fill="#53e4ff" filter="url(#tiny-glow)"/>
+      <ellipse cx="1152" cy="299" rx="12" ry="17" fill="#07111e"/>
+      <ellipse cx="1236" cy="299" rx="12" ry="17" fill="#07111e"/>
+      <path d="M1159 330q35 18 70 0" fill="none" stroke="#53e4ff" stroke-width="5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Camera mast and lens -->
+    <path d="M1204 229v-53" stroke="#284967" stroke-width="28" stroke-linecap="round"/>
+    <rect x="1149" y="113" width="111" height="73" rx="19" fill="#152c47" stroke="#5e7c98" stroke-width="3"/>
+    <circle cx="1205" cy="150" r="27" fill="#050b14" stroke="#44dcfb" stroke-width="4"/>
+    <circle cx="1205" cy="150" r="15" fill="#143e62"/>
+    <circle cx="1197" cy="142" r="6" fill="#a8f4ff" opacity=".85"/>
+    <circle cx="1241" cy="129" r="4" fill="#43e3a5" filter="url(#tiny-glow)"/>
+
+    <!-- Deck electronics hints -->
+    <g transform="translate(1010 416)">
+      <rect width="102" height="34" rx="8" fill="#0b1b2d" stroke="#2d6681"/>
+      <path d="M14 10h47v14H14zM68 10h20v14H68z" fill="#22c4e5" opacity=".45"/>
+      <text x="51" y="27" fill="#9feeff" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9" text-anchor="middle">ESP32-S3</text>
+    </g>
+    <g transform="translate(1280 416)">
+      <rect width="88" height="34" rx="8" fill="#0b1b2d" stroke="#6659b7"/>
+      <path d="M14 11h60v12H14z" fill="#8b7cff" opacity=".45"/>
+      <text x="44" y="27" fill="#d7d0ff" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9" text-anchor="middle">CAM NODE</text>
+    </g>
+    <g transform="translate(1151 421)">
+      <rect width="42" height="24" rx="12" fill="#112941" stroke="#3d6585"/>
+      <text x="21" y="16" fill="#9bb8cf" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9" font-weight="700" text-anchor="middle">4WD</text>
+    </g>
+  </g>
+
+  <!-- Component callouts -->
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="700" letter-spacing="1.2">
+    <path d="M1264 127h155l31-28" fill="none" stroke="#5fdff8" stroke-opacity=".55"/>
+    <circle cx="1264" cy="127" r="3" fill="#5fdff8"/>
+    <text x="1458" y="96" fill="#83dff0" text-anchor="end">OV3660 CAMERA</text>
+
+    <path d="M1312 263h118l27 18" fill="none" stroke="#5fdff8" stroke-opacity=".55"/>
+    <circle cx="1312" cy="263" r="3" fill="#5fdff8"/>
+    <text x="1465" y="285" fill="#83dff0" text-anchor="end">OLED FACE</text>
+
+    <path d="M1373 547h68l23 21" fill="none" stroke="#9c8fff" stroke-opacity=".68"/>
+    <circle cx="1373" cy="547" r="3" fill="#9c8fff"/>
+    <text x="1471" y="573" fill="#beb7ff" text-anchor="end">WS2812 LIGHTING</text>
+  </g>
+
+  <!-- Frame details -->
+  <path d="M28 88V28h60M1512 28h60v60M28 612v60h60M1512 672h60v-60" fill="none" stroke="#68ddf7" stroke-opacity=".28" stroke-width="2"/>
+  <text x="1506" y="647" fill="#4f6d89" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" text-anchor="end" letter-spacing="1.2">VISUAL STATUS · PROTOTYPE / SOURCE AUDIT 2026-08-19</text>
+</svg>

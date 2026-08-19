@@ -1,0 +1,35 @@
+# SPDX-FileCopyrightText: 2026 Tokimi Rover contributors
+# SPDX-License-Identifier: Apache-2.0
+
+.DS_Store
+
+# PlatformIO build output and local tooling
+.pio/
+**/.pio/
+.vscode/
+.idea/
+compile_commands.json
+/.playwright-cli/
+/output/playwright/
+
+# Local environment and credentials
+.env
+.env.*
+*.pem
+*.key
+firmware/rover-controller/include/local_config.h
+firmware/camera-node/include/camera_config.h
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*~
+
+# Generated firmware artifacts
+*.bin
+*.elf
+*.map
+
+# Media that has not been cleared for publication
+media/private/

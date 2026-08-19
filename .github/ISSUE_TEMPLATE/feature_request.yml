@@ -1,0 +1,45 @@
+name: Feature request
+description: Propose a scoped improvement without presenting it as implemented.
+title: "[Feature]: "
+labels: [enhancement, needs-discussion]
+body:
+  - type: dropdown
+    id: subsystem
+    attributes:
+      label: Subsystem
+      options:
+        - Motor control / safety
+        - Rover Web UI / API
+        - Camera / streaming
+        - Display / lighting
+        - Power / sensing
+        - Hardware / enclosure
+        - Documentation / tooling
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: GPIO, API, power, and safety impact
+      description: State explicitly if any public route, payload, pin, timing, or voltage changes.
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation plan
+      description: Include build, bench, lifted-wheel, failure, and rollback tests as applicable.
+    validations:
+      required: true

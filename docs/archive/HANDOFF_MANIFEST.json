@@ -1,0 +1,14 @@
+{
+  "package": "tokimi-rover-handoff-v0.1",
+  "generated_date": "2026-08-19",
+  "status": "pre-audit",
+  "files": [
+    "AGENTS.md",
+    "PROJECT_CONTEXT.md",
+    "HARDWARE_AS_BUILT.md",
+    "KNOWN_ISSUES.md",
+    "ROADMAP.md",
+    "README.md"
+  ],
+  "note": "Reconcile with Codex code audit before public release."
+}

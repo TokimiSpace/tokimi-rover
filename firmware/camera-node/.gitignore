@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2026 Tokimi Rover contributors
+# SPDX-License-Identifier: Apache-2.0
+
+.pio/
+.vscode/
+.DS_Store
+.env
+.env.*
+*.jpg
+*.jpeg
+*.log
+/include/camera_config.h

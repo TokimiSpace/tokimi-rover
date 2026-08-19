@@ -1,0 +1,14 @@
+# SPDX-FileCopyrightText: 2026 Tokimi Rover contributors
+# SPDX-License-Identifier: Apache-2.0
+
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.pdf binary
+*.stl binary
+*.glb binary
+*.zip binary

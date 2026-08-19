@@ -1,0 +1,67 @@
+name: Bug report
+description: Report a reproducible firmware, hardware, or documentation problem.
+title: "[Bug]: "
+labels: [bug, needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Stop using the rover immediately if the issue can cause unexpected motor
+        movement, overheating, battery damage, or loss of control.
+  - type: dropdown
+    id: subsystem
+    attributes:
+      label: Subsystem
+      options:
+        - Rover controller / motor safety
+        - Camera node / stream
+        - OLED
+        - WS2812 lighting
+        - Power / battery / motor driver
+        - Enclosure / mechanical
+        - Documentation / build
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: revision
+    attributes:
+      label: Firmware revision
+      description: Commit SHA, release tag, or archive identity.
+    validations:
+      required: true
+  - type: textarea
+    id: hardware
+    attributes:
+      label: Hardware and power configuration
+      description: Board revision, motor driver, battery, wiring changes, and connected peripherals.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior and logs
+      description: Remove credentials, private IP details, and personal media.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety confirmation
+      options:
+        - label: I have read `docs/SAFETY.md` and identified whether this can affect motor or power safety.
+          required: true
+        - label: I have removed passwords and other sensitive data from this report.
+          required: true

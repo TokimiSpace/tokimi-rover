@@ -1,0 +1,53 @@
+name: Firmware and repository checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: firmware-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  repository:
+    name: Repository checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/check_markdown_links.py
+      - run: bash scripts/check_repository.sh
+
+  firmware:
+    name: Build ${{ matrix.name }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: rover-controller
+            project: firmware/rover-controller
+            config_template: firmware/rover-controller/include/local_config.example.h
+            config_target: firmware/rover-controller/include/local_config.h
+          - name: camera-node
+            project: firmware/camera-node
+            config_template: firmware/camera-node/include/camera_config.h.example
+            config_target: firmware/camera-node/include/camera_config.h
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install PlatformIO
+        run: python -m pip install platformio==6.1.19
+      - name: Prepare non-secret CI configuration
+        run: cp "${{ matrix.config_template }}" "${{ matrix.config_target }}"
+      - name: Build
+        run: pio run --project-dir "${{ matrix.project }}"

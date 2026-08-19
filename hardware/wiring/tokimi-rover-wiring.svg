@@ -1,0 +1,217 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120">
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif; fill: #172033; }
+      .title { font-size: 30px; font-weight: 750; }
+      .subtitle { font-size: 15px; fill: #526077; }
+      .block-title { font-size: 20px; font-weight: 750; }
+      .label { font-size: 14px; font-weight: 650; }
+      .small { font-size: 12px; fill: #526077; }
+      .tiny { font-size: 11px; fill: #526077; }
+      .component { fill: #f8fafc; stroke: #334155; stroke-width: 2; rx: 14; }
+      .module { fill: #eff6ff; stroke: #2563eb; stroke-width: 2.5; rx: 16; }
+      .powerbox { fill: #fff7ed; stroke: #ea580c; stroke-width: 2.5; rx: 14; }
+      .motorbox { fill: #faf5ff; stroke: #7e22ce; stroke-width: 2.5; rx: 14; }
+      .ledbox { fill: #f0fdfa; stroke: #0f766e; stroke-width: 2.5; rx: 14; }
+      .note { fill: #fffbeb; stroke: #d97706; stroke-width: 1.5; rx: 10; }
+      .pin { fill: #fff; stroke: #64748b; stroke-width: 1.5; }
+      .signal { fill: none; stroke: #2563eb; stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
+      .data { fill: none; stroke: #0f766e; stroke-width: 3.5; stroke-linejoin: round; stroke-linecap: round; }
+      .logic { fill: none; stroke: #f59e0b; stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
+      .fivev { fill: none; stroke: #dc2626; stroke-width: 4; stroke-linejoin: round; stroke-linecap: round; }
+      .vm { fill: none; stroke: #ea580c; stroke-width: 4; stroke-linejoin: round; stroke-linecap: round; }
+      .ground { fill: none; stroke: #111827; stroke-width: 4; stroke-linejoin: round; stroke-linecap: round; }
+      .motorwire { fill: none; stroke: #7e22ce; stroke-width: 3.5; stroke-linejoin: round; stroke-linecap: round; }
+      .optional { fill: none; stroke: #64748b; stroke-width: 2; stroke-dasharray: 7 6; }
+    </style>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#0f766e"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#ea580c"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="1120" fill="#ffffff"/>
+  <text x="60" y="52" class="title">TOKIMI ROVER — ESP32-S3 Wiring Diagram</text>
+  <text x="60" y="78" class="subtitle">Firmware-verified GPIO map · Camera excluded · All grounds must be common</text>
+
+  <!-- ESP32-S3 -->
+  <rect x="60" y="125" width="370" height="670" class="module"/>
+  <text x="245" y="162" text-anchor="middle" class="block-title">ESP32-S3 N16R8</text>
+  <text x="245" y="184" text-anchor="middle" class="small">3.3 V GPIO logic</text>
+
+  <text x="85" y="225" class="label">OLED I²C</text>
+  <rect x="350" y="205" width="58" height="26" class="pin" rx="5"/><text x="379" y="223" text-anchor="middle" class="label">GPIO8</text>
+  <rect x="350" y="241" width="58" height="26" class="pin" rx="5"/><text x="379" y="259" text-anchor="middle" class="label">GPIO3</text>
+  <text x="85" y="295" class="label">WS2812B DATA</text>
+  <rect x="350" y="278" width="58" height="26" class="pin" rx="5"/><text x="379" y="296" text-anchor="middle" class="label">GPIO4</text>
+
+  <line x1="85" y1="330" x2="405" y2="330" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="85" y="360" class="label">LEFT MOTORS · TB6612 channel A</text>
+  <rect x="350" y="378" width="58" height="26" class="pin" rx="5"/><text x="379" y="396" text-anchor="middle" class="label">GPIO5</text><text x="85" y="396" class="small">PWMA · speed PWM</text>
+  <rect x="350" y="414" width="58" height="26" class="pin" rx="5"/><text x="379" y="432" text-anchor="middle" class="label">GPIO6</text><text x="85" y="432" class="small">AIN1 · direction</text>
+  <rect x="350" y="450" width="58" height="26" class="pin" rx="5"/><text x="379" y="468" text-anchor="middle" class="label">GPIO7</text><text x="85" y="468" class="small">AIN2 · direction</text>
+
+  <text x="85" y="510" class="label">RIGHT MOTORS · TB6612 channel B</text>
+  <rect x="350" y="528" width="58" height="26" class="pin" rx="5"/><text x="379" y="546" text-anchor="middle" class="label">GPIO16</text><text x="85" y="546" class="small">PWMB · speed PWM</text>
+  <rect x="350" y="564" width="58" height="26" class="pin" rx="5"/><text x="379" y="582" text-anchor="middle" class="label">GPIO17</text><text x="85" y="582" class="small">BIN1 · direction</text>
+  <rect x="350" y="600" width="58" height="26" class="pin" rx="5"/><text x="379" y="618" text-anchor="middle" class="label">GPIO18</text><text x="85" y="618" class="small">BIN2 · direction</text>
+  <rect x="350" y="642" width="58" height="26" class="pin" rx="5"/><text x="379" y="660" text-anchor="middle" class="label">GPIO15</text><text x="85" y="660" class="small">STBY · both channels</text>
+
+  <line x1="85" y1="687" x2="405" y2="687" stroke="#cbd5e1" stroke-width="1.5"/>
+  <rect x="350" y="706" width="58" height="26" class="pin" rx="5"/><text x="379" y="724" text-anchor="middle" class="label">3V3</text><text x="85" y="724" class="small">OLED VCC + TB6612 VCC</text>
+  <rect x="350" y="744" width="58" height="26" class="pin" rx="5"/><text x="379" y="762" text-anchor="middle" class="label">GND</text><text x="85" y="762" class="small">Common signal/power ground</text>
+
+  <!-- OLED -->
+  <rect x="575" y="110" width="315" height="190" class="component"/>
+  <text x="732" y="143" text-anchor="middle" class="block-title">1.3″ SH1106 OLED</text>
+  <text x="732" y="164" text-anchor="middle" class="small">I²C address 0x3C or 0x3D</text>
+  <circle cx="592" cy="205" r="5" fill="#2563eb"/><text x="610" y="210" class="label">SDA ← GPIO8</text>
+  <circle cx="592" cy="239" r="5" fill="#2563eb"/><text x="610" y="244" class="label">SCL ← GPIO3</text>
+  <circle cx="592" cy="273" r="5" fill="#f59e0b"/><text x="610" y="278" class="label">VCC ← 3.3 V</text>
+  <circle cx="873" cy="273" r="5" fill="#111827"/><text x="850" y="278" text-anchor="end" class="label">GND</text>
+
+  <path d="M408 218 H500 V205 H592" class="signal" marker-end="url(#arrow-blue)"/>
+  <path d="M408 254 H520 V239 H592" class="signal" marker-end="url(#arrow-blue)"/>
+  <path d="M408 719 H475 V273 H592" class="logic" marker-end="url(#arrow-orange)"/>
+
+  <!-- WS2812 data input conditioning -->
+  <rect x="560" y="315" width="190" height="52" class="note"/>
+  <text x="655" y="338" text-anchor="middle" class="label">330 Ω series resistor</text>
+  <text x="655" y="356" text-anchor="middle" class="tiny">Place near first LED DIN</text>
+  <path d="M408 291 H500 V341 H560" class="data"/>
+  <path d="M750 341 H1020 V159 H1080" class="data" marker-end="url(#arrow-green)"/>
+  <rect x="780" y="348" width="195" height="36" class="optional" rx="8"/>
+  <text x="877" y="363" text-anchor="middle" class="tiny">Optional for long/noisy wiring:</text>
+  <text x="877" y="378" text-anchor="middle" class="tiny">74AHCT125 3.3 V → 5 V level shift</text>
+  <path d="M877 341 V348" class="optional"/>
+
+  <!-- WS2812 chain -->
+  <text x="1218" y="106" text-anchor="middle" class="block-title">WS2812B · 32 LEDs · GRB</text>
+  <rect x="1080" y="125" width="275" height="68" class="ledbox"/>
+  <text x="1217" y="153" text-anchor="middle" class="label">FRONT STRIP · LED 0–7</text>
+  <text x="1217" y="176" text-anchor="middle" class="small">DIN ◀ · White headlights · DOUT ▼</text>
+  <rect x="1080" y="220" width="275" height="68" class="ledbox"/>
+  <text x="1217" y="248" text-anchor="middle" class="label">CENTER RING · LED 8–23</text>
+  <text x="1217" y="271" text-anchor="middle" class="small">DIN ▲ · Blue breathing · DOUT ▼</text>
+  <rect x="1080" y="315" width="275" height="68" class="ledbox"/>
+  <text x="1217" y="343" text-anchor="middle" class="label">REAR STRIP · LED 24–31</text>
+  <text x="1217" y="366" text-anchor="middle" class="small">DIN ▲ · Red tail lights</text>
+  <path d="M1217 193 V220" class="data" marker-end="url(#arrow-green)"/>
+  <path d="M1217 288 V315" class="data" marker-end="url(#arrow-green)"/>
+  <text x="1372" y="172" class="tiny">Data must follow DIN → DOUT</text>
+
+  <!-- TB6612 -->
+  <rect x="555" y="390" width="430" height="395" class="component"/>
+  <text x="770" y="424" text-anchor="middle" class="block-title">TB6612FNG Dual Motor Driver</text>
+  <text x="770" y="446" text-anchor="middle" class="small">Logic VCC = 3.3 V · VM = motor-rated supply</text>
+  <circle cx="572" cy="480" r="5" fill="#2563eb"/><text x="590" y="485" class="label">PWMA</text>
+  <circle cx="572" cy="516" r="5" fill="#2563eb"/><text x="590" y="521" class="label">AIN1</text>
+  <circle cx="572" cy="552" r="5" fill="#2563eb"/><text x="590" y="557" class="label">AIN2</text>
+  <circle cx="572" cy="588" r="5" fill="#2563eb"/><text x="590" y="593" class="label">STBY</text>
+  <circle cx="572" cy="630" r="5" fill="#2563eb"/><text x="590" y="635" class="label">PWMB</text>
+  <circle cx="572" cy="666" r="5" fill="#2563eb"/><text x="590" y="671" class="label">BIN1</text>
+  <circle cx="572" cy="702" r="5" fill="#2563eb"/><text x="590" y="707" class="label">BIN2</text>
+
+  <circle cx="968" cy="495" r="5" fill="#7e22ce"/><text x="942" y="500" text-anchor="end" class="label">AO1</text>
+  <circle cx="968" cy="535" r="5" fill="#7e22ce"/><text x="942" y="540" text-anchor="end" class="label">AO2</text>
+  <circle cx="968" cy="630" r="5" fill="#7e22ce"/><text x="942" y="635" text-anchor="end" class="label">BO1</text>
+  <circle cx="968" cy="670" r="5" fill="#7e22ce"/><text x="942" y="675" text-anchor="end" class="label">BO2</text>
+
+  <circle cx="685" cy="768" r="5" fill="#f59e0b"/><text x="685" y="751" text-anchor="middle" class="label">VCC</text>
+  <circle cx="770" cy="768" r="5" fill="#111827"/><text x="770" y="751" text-anchor="middle" class="label">GND</text>
+  <circle cx="855" cy="768" r="5" fill="#ea580c"/><text x="855" y="751" text-anchor="middle" class="label">VM</text>
+
+  <path d="M408 391 H485 V480 H572" class="signal" marker-end="url(#arrow-blue)"/>
+  <path d="M408 427 H500 V516 H572" class="signal" marker-end="url(#arrow-blue)"/>
+  <path d="M408 463 H515 V552 H572" class="signal" marker-end="url(#arrow-blue)"/>
+  <path d="M408 655 H535 V588 H572" class="signal" marker-end="url(#arrow-blue)"/>
+  <path d="M408 541 H485 V630 H572" class="signal" marker-end="url(#arrow-blue)"/>
+  <path d="M408 577 H500 V666 H572" class="signal" marker-end="url(#arrow-blue)"/>
+  <path d="M408 613 H515 V702 H572" class="signal" marker-end="url(#arrow-blue)"/>
+  <path d="M475 719 H685 V768" class="logic" marker-end="url(#arrow-orange)"/>
+
+  <!-- Motors -->
+  <rect x="1090" y="440" width="400" height="150" class="motorbox"/>
+  <text x="1290" y="472" text-anchor="middle" class="block-title">LEFT MOTOR PAIR · M1 + M2</text>
+  <text x="1290" y="498" text-anchor="middle" class="small">Two left TT motors wired in parallel</text>
+  <circle cx="1215" cy="540" r="25" fill="#fff" stroke="#7e22ce" stroke-width="3"/><text x="1215" y="546" text-anchor="middle" class="label">M1</text>
+  <circle cx="1365" cy="540" r="25" fill="#fff" stroke="#7e22ce" stroke-width="3"/><text x="1365" y="546" text-anchor="middle" class="label">M2</text>
+  <path d="M968 495 H1040 V520 H1190 M1040 520 H1340" class="motorwire"/>
+  <path d="M968 535 H1025 V560 H1190 M1025 560 H1340" class="motorwire"/>
+
+  <rect x="1090" y="620" width="400" height="150" class="motorbox"/>
+  <text x="1290" y="652" text-anchor="middle" class="block-title">RIGHT MOTOR PAIR · M3 + M4</text>
+  <text x="1290" y="678" text-anchor="middle" class="small">Two right TT motors wired in parallel</text>
+  <circle cx="1215" cy="720" r="25" fill="#fff" stroke="#7e22ce" stroke-width="3"/><text x="1215" y="726" text-anchor="middle" class="label">M3</text>
+  <circle cx="1365" cy="720" r="25" fill="#fff" stroke="#7e22ce" stroke-width="3"/><text x="1365" y="726" text-anchor="middle" class="label">M4</text>
+  <path d="M968 630 H1040 V700 H1190 M1040 700 H1340" class="motorwire"/>
+  <path d="M968 670 H1025 V740 H1190 M1025 740 H1340" class="motorwire"/>
+  <text x="1290" y="788" text-anchor="middle" class="tiny">Recommended: 0.1 µF ceramic capacitor across each motor’s terminals</text>
+
+  <!-- Power section -->
+  <rect x="60" y="855" width="250" height="125" class="powerbox"/>
+  <text x="185" y="890" text-anchor="middle" class="block-title">Battery Pack</text>
+  <text x="185" y="916" text-anchor="middle" class="small">2S · 2 × 18650 in series</text>
+  <text x="185" y="940" text-anchor="middle" class="small">7.4 V nominal · 8.4 V fully charged</text>
+  <text x="185" y="962" text-anchor="middle" class="small">Use a protected pack / 2S BMS</text>
+  <text x="185" y="976" text-anchor="middle" class="tiny">Do not feed 8.4 V to low-voltage TT motors</text>
+
+  <rect x="360" y="870" width="170" height="95" class="powerbox"/>
+  <text x="445" y="903" text-anchor="middle" class="block-title">Fuse + Switch</text>
+  <text x="445" y="930" text-anchor="middle" class="small">Close to battery +</text>
+  <path d="M310 905 H360" class="vm" marker-end="url(#arrow-orange)"/>
+
+  <rect x="610" y="835" width="245" height="145" class="powerbox"/>
+  <text x="732" y="870" text-anchor="middle" class="block-title">LM2596 Buck</text>
+  <text x="732" y="898" text-anchor="middle" class="label">Output: exactly 5.0 V</text>
+  <text x="732" y="924" text-anchor="middle" class="small">WS2812B power only</text>
+  <text x="732" y="950" text-anchor="middle" class="small">≥ 1 A; 2 A recommended</text>
+  <path d="M530 905 H610" class="vm" marker-end="url(#arrow-orange)"/>
+  <circle cx="570" cy="905" r="6" fill="#ea580c"/>
+
+  <rect x="945" y="835" width="260" height="145" class="note"/>
+  <text x="1075" y="870" text-anchor="middle" class="block-title">1000 µF capacitor</text>
+  <text x="1075" y="899" text-anchor="middle" class="label">Across WS2812 5 V and GND</text>
+  <text x="1075" y="925" text-anchor="middle" class="small">Install near first LED</text>
+  <text x="1075" y="951" text-anchor="middle" class="small">Observe capacitor polarity</text>
+  <path d="M855 874 H945" class="fivev" marker-end="url(#arrow-red)"/>
+
+  <rect x="1280" y="835" width="250" height="145" class="component"/>
+  <text x="1405" y="870" text-anchor="middle" class="block-title">ESP32 Power</text>
+  <text x="1405" y="898" text-anchor="middle" class="small">USB or regulated board input</text>
+  <text x="1405" y="924" text-anchor="middle" class="small">Use the board’s rated VIN/5 V pin</text>
+  <text x="1405" y="950" text-anchor="middle" class="small">Do not feed raw battery into 3V3</text>
+
+  <!-- Power branches and rails -->
+  <path d="M570 905 V995 H890 V805 H855 V768" class="vm" marker-end="url(#arrow-orange)"/>
+  <path d="M855 874 H900 V825 H1045 V125 H1080" class="fivev" marker-end="url(#arrow-red)"/>
+  <path d="M1045 254 H1080" class="fivev" marker-end="url(#arrow-red)"/>
+  <path d="M1045 349 H1080" class="fivev" marker-end="url(#arrow-red)"/>
+  <path d="M1355 176 H1550 V1060" class="ground"/>
+  <path d="M1355 271 H1550" class="ground"/>
+  <path d="M1355 366 H1550" class="ground"/>
+  <text x="1026" y="411" class="tiny">Power each LED zone in parallel; data remains serial</text>
+
+  <!-- Common ground rail -->
+  <path d="M185 980 V1060 H1550" class="ground"/>
+  <path d="M732 980 V1060 M1075 980 V1060 M1405 980 V1060" class="ground"/>
+  <path d="M408 757 H455 V815 H330 V1060" class="ground"/>
+  <path d="M770 768 V815 H910 V1060" class="ground"/>
+  <path d="M873 273 H995 V805 H1235 V1060" class="ground"/>
+  <text x="790" y="1088" text-anchor="middle" class="label">COMMON GND: ESP32 · OLED · TB6612 · LM2596 · WS2812B · battery return</text>
+
+  <!-- Legend -->
+  <rect x="60" y="1005" width="450" height="35" fill="#fff" stroke="#cbd5e1" rx="8"/>
+  <line x1="75" y1="1023" x2="110" y2="1023" class="signal"/><text x="120" y="1028" class="tiny">GPIO</text>
+  <line x1="175" y1="1023" x2="210" y2="1023" class="logic"/><text x="220" y="1028" class="tiny">3.3 V</text>
+  <line x1="285" y1="1023" x2="320" y2="1023" class="fivev"/><text x="330" y="1028" class="tiny">5 V</text>
+  <line x1="385" y1="1023" x2="420" y2="1023" class="ground"/><text x="430" y="1028" class="tiny">GND</text>
+</svg>

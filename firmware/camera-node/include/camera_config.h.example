@@ -1,0 +1,22 @@
+// SPDX-FileCopyrightText: 2026 Tokimi Rover contributors
+// SPDX-License-Identifier: Apache-2.0
+
+#pragma once
+
+#include <stdint.h>
+
+// Copy this file to camera_config.h, then replace the example credentials
+// before flashing hardware. camera_config.h is intentionally ignored by Git.
+namespace TokimiCameraConfig {
+
+constexpr char kApSsid[] = "Tokimi-Camera-EXAMPLE";
+constexpr char kApPassword[] = "replace-with-a-unique-password";
+
+constexpr uint8_t kApChannel = 1;
+constexpr uint8_t kMaxWifiClients = 4;
+
+constexpr uint8_t kApAddress[4] = {192, 168, 4, 1};
+constexpr uint8_t kApGateway[4] = {192, 168, 4, 1};
+constexpr uint8_t kApSubnet[4] = {255, 255, 255, 0};
+
+}  // namespace TokimiCameraConfig
