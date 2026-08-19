@@ -201,7 +201,7 @@ A public prototype release should let another builder understand:
 4. the historically reported power and mechanical construction;
 5. the TB6612, STOP, battery, and motor-voltage risks;
 6. which claims have build evidence and which still need physical validation;
-7. that release provenance still requires an actual commit, tag, artifact hashes, and owner publication action.
+7. that a tagged release still requires a tag, artifact hashes, and a release manifest tied to an exact commit.
 
 See [Release checklist](docs/RELEASE_CHECKLIST.md) for remaining work.
 

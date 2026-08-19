@@ -15,6 +15,7 @@ The complete texts are
 [CC-BY-4.0](../LICENSES/CC-BY-4.0.txt). V0.1 contains no editable CAD model;
 the hardware license does not make absent design files available.
 
-No persistent CERN-OHL Source Location is declared until the canonical public
-GitHub URL exists. Recipients of this repository receive the Covered Source
-currently present here.
+The CERN-OHL-W-2.0 Source Location for currently published Covered Source is
+[`https://github.com/TokimiSpace/tokimi-rover/tree/main/hardware`](https://github.com/TokimiSpace/tokimi-rover/tree/main/hardware).
+A tagged release should use a tag-specific Source Location in its release
+manifest.

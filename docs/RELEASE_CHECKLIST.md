@@ -31,7 +31,7 @@
 - [ ] Generate SHA-256 hashes for release artifacts from the tagged commit.
 - [ ] Generate third-party license notices or an SBOM for the exact dependency set before distributing firmware binaries.
 - [x] The packaged source tree contains no `.pio/`, local configuration, or generated firmware binary.
-- [ ] Confirm no `.pio/`, local configuration, credentials, private IP assumptions, or private media are staged.
+- [x] Confirm no `.pio/`, local configuration, credentials, private IP assumptions, or private media are staged.
 
 ## Safety-critical software
 
@@ -87,9 +87,9 @@
 - [x] Trademark/logo boundaries and factual-use/attribution exceptions are documented in `TRADEMARKS.md`.
 - [x] Contribution and security policies plus issue and pull-request templates are present.
 - [ ] Review personal/contact information intended for publication.
-- [ ] Create an initial Git commit history with a traceable repository origin.
-- [ ] Create and verify the canonical public `TokimiSpace/tokimi-rover` remote.
-- [ ] Verify the separately published `https://tokimispace.github.io/` site and its Rover links.
+- [x] Create an initial Git commit history with a traceable repository origin.
+- [x] Create and verify the canonical public `TokimiSpace/tokimi-rover` remote.
+- [x] Verify the separately published `https://tokimispace.github.io/` site and its Rover links.
 - [ ] Create and sign/annotate the V0.1 tag as appropriate.
 - [ ] Attach build artifacts, hashes, build logs, and test report to the release.
 - [ ] Publish field photos/video only with rights and privacy review.

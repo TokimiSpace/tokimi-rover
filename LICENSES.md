@@ -42,10 +42,11 @@ CERN-OHL-W-2.0, exact version 2.0 only, applies to:
   `SPDX-License-Identifier: CERN-OHL-W-2.0`.
 
 The current `hardware/cad/README.md` is only a status document and is licensed
-under CC-BY-4.0. No editable CAD source was supplied in V0.1. No persistent
-CERN-OHL Source Location is declared until the canonical public GitHub URL
-exists; a recipient of this repository already receives the Covered Source
-that is present here.
+under CC-BY-4.0. No editable CAD source was supplied in V0.1. The
+CERN-OHL-W-2.0 Source Location for currently published Covered Source is
+[`https://github.com/TokimiSpace/tokimi-rover/tree/main/hardware`](https://github.com/TokimiSpace/tokimi-rover/tree/main/hardware).
+A tagged release should use a tag-specific Source Location in its release
+manifest.
 
 ### CC-BY-4.0 documentation scope
 

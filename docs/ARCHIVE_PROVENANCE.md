@@ -40,12 +40,14 @@ During the read-only audit:
 - test commands found no test directories and ended with `TestDirNotExistsError`.
 
 Public-repository packaging after the audit changes the working tree and is not covered by the original ZIP hashes.
+The public Git history begins with commit `0fba3b5`; it is a packaging origin,
+not evidence that the supplied archives had an earlier verified Git history.
 
 ## Creating release provenance
 
 Before publishing a tagged release:
 
-1. create the repository in the intended owner/organization account;
+1. identify the exact release commit in the canonical public repository;
 2. review every staged file, including binary assets and history-preservation files;
 3. make a clean build from the exact release commit with local secrets excluded;
 4. record the commit ID, tag, PlatformIO/platform/framework versions, and build sizes;

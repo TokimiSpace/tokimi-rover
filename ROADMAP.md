@@ -37,7 +37,7 @@ Make the current rover reproducible and useful as a reference platform.
 - [x] trademark statement and final license selection
 - [x] English-first README and zh-TW README
 - [x] Tokimi Open Source site source separated into its dedicated publication repository
-- [ ] live organization site verified at `https://tokimispace.github.io/`
+- [x] live organization site verified at `https://tokimispace.github.io/`
 - [x] safety guide and release checklist
 - [x] supplied-archive provenance/hashes documented
 
@@ -219,7 +219,7 @@ The source may be open while **Tokimi**, its logo, and “Official Tokimi Rover�
 
 ## Immediate next actions
 
-1. Create the public GitHub repository, then record its canonical URL as the CERN-OHL Source Location.
+1. Prepare a tag-specific release manifest and CERN-OHL Source Location for the first tagged release.
 2. Run clean builds from the final release commit and record versions, sizes, and hashes.
 3. Fix and test STOP request ordering plus a hard worst-case stop deadline.
 4. Identify the 18650 pack and resolve the 3–7.2 V motor versus 8.4 V supply conflict.
