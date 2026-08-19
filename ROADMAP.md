@@ -28,8 +28,10 @@ Make the current rover reproducible and useful as a reference platform.
 - [x] build/flash guide for camera node — `docs/BUILD_AND_FLASH.md`
 - [ ] current BOM with verified part numbers
 - [ ] wiring diagrams for power, motor driver, OLED, camera, and lighting
-- [ ] editable top-cover source plus STL/GLB/OBJ exports
-- [ ] 1:1 mounting-hole template
+- [x] owner-selected editable top-cover source plus 3MF/STL/OBJ exports
+- [x] A4 1:1 mounting-hole template with a 100 mm calibration line
+- [ ] physically verify V3's 195 × 100 mm pattern and publish GLB/parametric
+  exchange source if a demonstrated need remains
 - [x] known-issues page with TB6612 thermal shutdown highlighted
 - [ ] field-demo photos and short video
 - [ ] first tagged release
@@ -48,7 +50,11 @@ Make the current rover reproducible and useful as a reference platform.
 - safety limitations are visible from the README;
 - no credentials or private network settings are committed.
 
-Documentation now meets the first three explanatory goals, deployment credentials have been moved to ignored local configuration, and the approved multi-license structure is active. Physical reproduction assets, physical safety validation, and a tagged release remain open; see `docs/RELEASE_CHECKLIST.md`.
+Documentation now meets the first three explanatory goals, deployment
+credentials have been moved to ignored local configuration, the approved
+multi-license structure is active, and V3 top-cover reproduction assets are
+published. CAD-to-chassis fit, physical safety validation, and a tagged release
+remain open; see `docs/RELEASE_CHECKLIST.md`.
 
 ---
 

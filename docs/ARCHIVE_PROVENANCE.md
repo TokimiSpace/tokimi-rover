@@ -43,6 +43,35 @@ Public-repository packaging after the audit changes the working tree and is not 
 The public Git history begins with commit `0fba3b5`; it is a packaging origin,
 not evidence that the supplied archives had an earlier verified Git history.
 
+## Supercar V3 CAD import
+
+The top-cover package was not present in the three ZIP archives above. It was
+curated separately on 2026-08-19 from the project owner's local design
+repository at commit
+`832607fa7774f4a0d7127bf7e1cfed78f55e4ddf`; that local repository had no
+configured remote. The owner identified the following files as the final pair:
+
+| Owner-selected artifact | Original SHA-256 |
+|---|---|
+| `tokimi_rover_top_cover_supercar_v3_195x100mm.3mf` | `63705ecb922497ba21377872e016b9f1f347514e83f36552bd44460a31844ad6` |
+| `tokimi_rover_top_cover_supercar_v3_m3_fitcheck_195x100mm_A4_1to1.pdf` | `7d6b6a89d0019a412369d6b36be1a25f1878ef68775be773c293c518a9887687` |
+
+The public package preserves those two byte streams and their hashes. It also
+includes the minimum V3 procedural source chain, checked mesh exports, a
+self-contained editable Blender scene, sanitized validation data, and preview
+renders. Publication changes replaced machine-specific paths, removed preview
+metadata, localized Blender's bundled node-group dependency, and added SPDX
+notices and documentation. The source geometry was rebuilt with Blender 5.2.0
+LTS and its canonical triangle set was compared with the checked release mesh.
+
+The original CAD Git history, unrelated variants, temporary files, private
+correspondence screenshot, and unselected design outputs were not imported.
+The screenshot identifies the owner's selection but is neither redistributed
+nor treated as independent proof of physical fit. The historical as-built
+record says approximately 203 × 105 mm hole centers while published V3 uses
+195 × 100 mm; this unresolved physical conflict is recorded in
+`KNOWN_ISSUES.md`.
+
 ## Creating release provenance
 
 Before publishing a tagged release:

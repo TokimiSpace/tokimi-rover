@@ -53,6 +53,20 @@ The camera controller and rover controller have no GPIO, UART, I²C, SPI, or app
 
 *Click the diagram for the scalable SVG. It records the firmware-verified GPIO map and intended/reported rover wiring; the camera node is excluded. The assembled vehicle was not physically re-verified wire by wire during this repository audit.*
 
+## Open top-cover CAD
+
+[![Tokimi Rover Supercar V3 top-cover CAD render](hardware/cad/top-cover-v3/previews/tokimi_rover_top_cover_supercar_v3_195x100mm_front34.png)](hardware/cad/top-cover-v3/README.md)
+
+*CAD render—not a physical rover photo or evidence of chassis fit.*
+
+The owner-selected **Supercar V3** package includes procedural Blender source,
+a self-contained editable BLEND, 3MF/STL/OBJ exports, clean renders, validation
+data, checksums, and an A4 1:1 M3 fit-check sheet. The published V3 hole centers
+are **195 × 100 mm**; the historical physical-cover record says approximately
+**203 × 105 mm**. This audit did not physically reconcile those measurements or
+fit V3 to the rover. [Review the CAD package and print-check procedure before
+manufacturing.](hardware/cad/top-cover-v3/README.md)
+
 ## Start here
 
 | Step | Guide | Why it matters |
@@ -83,7 +97,7 @@ No automated firmware tests currently exist. Physical motor polarity, stop laten
 - TB6612FNG thermal margin and the installed 18650 pack remain unmeasured.
 - The reported 3–7.2 V motors can receive 8.4 V pulses from a full 2S pack.
 - Camera health can become stale, and `GET /restart` has no application authentication.
-- The editable enclosure CAD, verified BOM part numbers, and physical acceptance report are still missing.
+- V3 CAD is published, but its 195 × 100 mm hole pattern has not been physically reconciled with the historical 203 × 105 mm record; verified BOM part numbers and a physical acceptance report are still missing.
 
 Track the full list in [Known issues](KNOWN_ISSUES.md) and the evidence-gated work in the [V0.1 release checklist](docs/RELEASE_CHECKLIST.md).
 
@@ -117,6 +131,7 @@ See [Hardware as built](HARDWARE_AS_BUILT.md) and the current prototype [BOM](ha
 | [Current pin map](docs/CURRENT_PINMAP.md) | Rover and camera GPIO assignments |
 | [Current API](docs/CURRENT_API.md) | Exact HTTP routes, parameters, responses, and limitations |
 | [Hardware as built](HARDWARE_AS_BUILT.md) | Historically reported physical configuration and open measurements |
+| [Top-cover CAD](hardware/cad/top-cover-v3/README.md) | Owner-selected V3 source, exports, A4 fit-check template, and validation boundary |
 | [Known issues](KNOWN_ISSUES.md) | Safety and reliability limitations |
 | [Roadmap](ROADMAP.md) | Planned work, clearly separated from current features |
 | [Release checklist](docs/RELEASE_CHECKLIST.md) | Work remaining before a tagged public release |

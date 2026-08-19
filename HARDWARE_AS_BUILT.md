@@ -221,7 +221,8 @@ Retained base:
 
 - two transparent acrylic smart-car chassis plates.
 
-Final design basis:
+Historical physical record (the printed part was not remeasured during this
+audit):
 
 | Item | Dimension |
 |---|---:|
@@ -237,7 +238,36 @@ Final design basis:
 | Camera module envelope | 28 × 77 mm nominal |
 | Front/rear light module length | 54 mm |
 
-The top cover includes a curved profile, high/low roof geometry, camera section, OLED opening, light integration, and ventilation. Exact printed material, wall thickness, mass, paint, and final fit should be entered after measurement.
+The project owner also designated a separate
+[Supercar V3 CAD package](hardware/cad/top-cover-v3/README.md) as the final
+version to publish. Its software-checked design contract is:
+
+| Item | Published V3 value |
+|---|---:|
+| Overall plan | 260 × 155 mm |
+| Front-to-rear M3 hole-center spacing | 195 mm |
+| Left-to-right M3 hole-center spacing | 100 mm |
+| Front / rear flat contact planes | z = 15 / 55 mm |
+| Nominal roof incline | 11.5922° |
+| M3 clearance holes | Ø3.5 mm |
+| Nominal shell thickness | 2.5 mm |
+| OLED opening | 19 × 36 mm |
+| Camera roof clearance | 29 × 78 mm |
+| Breadboard target | 85 × 58 × 10 mm |
+| Tail drop | 30 mm over the rear 32.5 mm |
+
+The 203 × 105 mm historical record and 195 × 100 mm V3 contract conflict.
+Owner correspondence identifies the V3 3MF and matching A4 1:1 sheet as the
+publication pair, but it is not independent proof of physical fit. Do not
+silently substitute one set of dimensions for the other: first verify the
+printed 100 mm calibration line, then compare all four V3 hole centers with the
+unpowered chassis.
+
+The historical cover was described as curved with high/low roof geometry,
+camera section, OLED opening, lighting integration, and ventilation. Exact
+printed material, wall thickness, mass, paint, current chassis hole pattern,
+and the identity/fit of the historical part versus V3 should be entered after
+physical measurement.
 
 ## 9. Construction and connectors
 
@@ -260,6 +290,8 @@ Before publishing a definitive BOM or build guide, record:
 - TB6612 surface temperature versus run time;
 - final rover mass;
 - actual top-cover filament material and print settings;
+- current chassis hole centers and physical fit of the published V3
+  195 × 100 mm pattern versus the historical 203 × 105 mm record;
 - camera stream resolution, FPS, and latency;
 - Wi-Fi range and RSSI;
 - whether the external camera antenna is actually active;

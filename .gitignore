@@ -31,5 +31,12 @@ firmware/camera-node/include/camera_config.h
 *.elf
 *.map
 
+# Generated CAD intermediates and Blender backups
+hardware/cad/**/generated/
+*.blend1
+*.npz
+__pycache__/
+*.py[cod]
+
 # Media that has not been cleared for publication
 media/private/

@@ -64,11 +64,12 @@
 - [ ] Photograph and document fuse placement, wire gauges, grounds, polarity, strain relief, and connectors.
 - [ ] Remove breadboard/high-current friction connections from the drive path.
 - [ ] Verify external camera antenna selection and repeatable range/RSSI.
-- [ ] Record final rover mass, payload, top-cover material, print settings, and fit.
+- [ ] Record final rover mass, payload, top-cover material, print settings, and fit; reconcile the historical 203 × 105 mm record with V3's 195 × 100 mm pattern.
 - [ ] Publish a verified BOM with exact part numbers.
 - [ ] Publish reviewed wiring diagrams for every power and signal path.
-- [ ] Publish editable enclosure source and checked STL/GLB/OBJ exports.
-- [ ] Publish a verified 1:1 mounting template.
+- [x] Publish owner-selected procedural/editable V3 source and software-checked 3MF/STL/OBJ exports; no GLB or final parametric STEP is claimed.
+- [x] Publish the A4 1:1 V3 mounting template with a 100 mm calibration line.
+- [ ] Physically verify the printed template scale and all four V3 hole centers against the current unpowered chassis.
 
 ## Physical acceptance tests
 

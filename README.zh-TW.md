@@ -38,6 +38,18 @@ Tokimi Rover 是一台以 ESP32-S3 為核心的模組化 Rover 原型，整合�
 
 *點擊圖片可開啟向量 SVG。此圖記錄韌體確認的 GPIO 與預定／回報接線，不包含攝影機節點；本次 repository 稽核沒有逐線重新檢查實車。*
 
+## 開源車殼 CAD
+
+[![Tokimi Rover Supercar V3 車殼 CAD 示意圖](hardware/cad/top-cover-v3/previews/tokimi_rover_top_cover_supercar_v3_195x100mm_front34.png)](hardware/cad/top-cover-v3/README.md)
+
+*這是 CAD 渲染圖，不是實車照片，也不代表已完成車架試裝。*
+
+目前公開的是專案擁有者指定的 **Supercar V3**：包含 Blender 程序化原始碼、
+不依賴外部資產的可編輯 BLEND、3MF／STL／OBJ、乾淨預覽圖、驗證資料、雜湊，
+以及 A4 1:1 M3 孔位核對紙。V3 孔距是 **195 × 100 mm**；歷史實車文件則
+記錄約 **203 × 105 mm**。本次稽核沒有拿 V3 對實車量測或試裝，列印前請先
+[閱讀 CAD 發布包並依步驟核對 100 mm 校正線與四個孔位](hardware/cad/top-cover-v3/README.md)。
+
 ## 文件導覽
 
 | 文件 | 內容 |
@@ -48,6 +60,7 @@ Tokimi Rover 是一台以 ESP32-S3 為核心的模組化 Rover 原型，整合�
 | [目前腳位](docs/CURRENT_PINMAP.md) | Rover 與攝影機 GPIO 對照 |
 | [目前 API](docs/CURRENT_API.md) | HTTP 路由、參數、回應與限制 |
 | [實車硬體紀錄](HARDWARE_AS_BUILT.md) | 過往回報的實體配置與待量測項目 |
+| [車殼 CAD](hardware/cad/top-cover-v3/README.md) | V3 原始碼、列印檔、A4 孔位紙與驗證邊界 |
 | [已知問題](KNOWN_ISSUES.md) | 安全與可靠度限制 |
 | [路線圖](ROADMAP.md) | 未來計畫；不代表現有功能 |
 | [發行檢查表](docs/RELEASE_CHECKLIST.md) | 建立公開 tag 前仍需完成的工作 |

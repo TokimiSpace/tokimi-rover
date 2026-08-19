@@ -37,12 +37,16 @@ part of the Apache-2.0 software distribution metadata.
 CERN-OHL-W-2.0, exact version 2.0 only, applies to:
 
 - `hardware/bom/BOM.md` as hardware design/manufacturing source;
+- the design/generator/check source, editable BLEND, 3MF/STL/OBJ exports, A4
+  fit-check template, validation data, renders, requirements, and checksum
+  manifest under `hardware/cad/top-cover-v3/`, except its explanatory
+  `README.md` and `NOTICE.md`;
 - future editable CAD, schematic, PCB, mechanical, fabrication, and
   manufacturing source placed under `hardware/cad/` or explicitly marked with
   `SPDX-License-Identifier: CERN-OHL-W-2.0`.
 
-The current `hardware/cad/README.md` is only a status document and is licensed
-under CC-BY-4.0. No editable CAD source was supplied in V0.1. The
+`hardware/cad/README.md` and `hardware/cad/top-cover-v3/{README,NOTICE}.md` are
+explanatory-documentation exceptions licensed under CC-BY-4.0. The
 CERN-OHL-W-2.0 Source Location for currently published Covered Source is
 [`https://github.com/TokimiSpace/tokimi-rover/tree/main/hardware`](https://github.com/TokimiSpace/tokimi-rover/tree/main/hardware).
 A tagged release should use a tag-specific Source Location in its release
@@ -56,8 +60,9 @@ CC-BY-4.0 applies to:
 - project-authored documentation and archival metadata under `docs/`, including
   the retained JSON manifest;
 - firmware README and test-procedure Markdown files;
-- `hardware/README.md`, `hardware/cad/README.md`, and other explanatory
-  hardware documentation except the BOM noted above;
+- `hardware/README.md`, `hardware/cad/README.md`,
+  `hardware/cad/top-cover-v3/{README,NOTICE}.md`, and other explanatory hardware
+  documentation except the hardware source noted above;
 - both versions of the original Tokimi Rover wiring diagram under
   `hardware/wiring/`;
 - project-authored explanatory text under `media/`.

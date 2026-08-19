@@ -1,0 +1,9 @@
+# SPDX-FileCopyrightText: 2026 Tokimi Rover contributors
+# SPDX-License-Identifier: CERN-OHL-W-2.0
+
+# Versions exercised during the 2026-08-19 publication audit.
+numpy==2.5.1
+lib3mf==2.5.0
+reportlab==5.0.0
+build123d==0.11.1
+cad-khana==0.0.2

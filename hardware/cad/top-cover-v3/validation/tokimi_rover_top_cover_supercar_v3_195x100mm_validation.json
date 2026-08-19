@@ -1,0 +1,161 @@
+{
+  "model": "TOKIMI ROVER TOP COVER — SUPERCAR V3 / BREADBOARD TOWER",
+  "units": "mm",
+  "coordinate_system": {
+    "origin": "front-left outer bounding-box corner",
+    "x_positive": "rear",
+    "y_positive": "vehicle right",
+    "z_positive": "up"
+  },
+  "overall_plan_mm": [
+    260.0,
+    155.0
+  ],
+  "nominal_roof_incline_degrees": 11.5922,
+  "mounts": [
+    {
+      "center_xy_mm": [
+        32.5,
+        27.5
+      ],
+      "flat_contact_z_mm": 15.0,
+      "hole_diameter_mm": 3.5,
+      "pad_total_thickness_mm": 4.0
+    },
+    {
+      "center_xy_mm": [
+        32.5,
+        127.5
+      ],
+      "flat_contact_z_mm": 15.0,
+      "hole_diameter_mm": 3.5,
+      "pad_total_thickness_mm": 4.0
+    },
+    {
+      "center_xy_mm": [
+        227.5,
+        27.5
+      ],
+      "flat_contact_z_mm": 55.0,
+      "hole_diameter_mm": 3.5,
+      "pad_total_thickness_mm": 4.0
+    },
+    {
+      "center_xy_mm": [
+        227.5,
+        127.5
+      ],
+      "flat_contact_z_mm": 55.0,
+      "hole_diameter_mm": 3.5,
+      "pad_total_thickness_mm": 4.0
+    }
+  ],
+  "oled": {
+    "center_xy_mm": [
+      102.0,
+      77.5
+    ],
+    "opening_xy_mm": [
+      19.0,
+      36.0
+    ],
+    "bezel_outer_xy_mm": [
+      27.0,
+      44.0
+    ]
+  },
+  "camera": {
+    "roof_module_clearance_center_xy_mm": [
+      205.0,
+      77.5
+    ],
+    "roof_module_clearance_xy_mm": [
+      29.0,
+      78.0
+    ],
+    "visible_forward_arch_opening_yz_mm": [
+      0.0,
+      0.0
+    ],
+    "tower_height_above_local_deck_mm": 91.71709278835785
+  },
+  "shell_thickness_mm": 2.5,
+  "mesh": {
+    "vertices": 28734,
+    "edges": 53780,
+    "polygons": 24900,
+    "non_manifold_edges": 0,
+    "boundary_edges": 0,
+    "connected_face_components": 1,
+    "zero_area_faces": 0,
+    "volume_mm3": 159087.665,
+    "bbox_min_mm": [
+      0.0,
+      0.0,
+      3.931
+    ],
+    "bbox_max_mm": [
+      260.0,
+      155.0,
+      166.8811
+    ],
+    "dimensions_mm": [
+      260.0,
+      155.0,
+      162.9501
+    ]
+  },
+  "print_notes": [
+    "OBJ coordinates are millimetres.",
+    "PETG recommended.",
+    "Print the cover bottom-down with supports beneath the tower bridge.",
+    "Use 4 or more perimeters around the lattice and camera tower.",
+    "Run a low-cost fit check before the final print."
+  ],
+  "design_style": "modern supercar V3 — dropped tail (30 mm), solid raked breadboard tower with front pocket and USB-C pass-through",
+  "v3_changes": {
+    "tail_drop_mm": 30.0,
+    "tail_drop_span_x_mm": [
+      227.5,
+      260.0
+    ],
+    "breadboard_mm": [
+      85.0,
+      58.0,
+      10.0
+    ],
+    "pocket_mm": {
+      "width": 58.8,
+      "along_raked_axis": 86.0,
+      "depth": 10.8,
+      "shelf_above_slab_base": 8.0,
+      "top_lip": 5.0,
+      "note": "front-open cradle; breadboard adhesive backing + press fit"
+    },
+    "usb_c_slot_mm": {
+      "cross_section_xy": [
+        8.0,
+        14.0
+      ],
+      "center_x": 155.0,
+      "z_span": [
+        42.0,
+        88.0
+      ]
+    },
+    "tower": {
+      "height_above_local_deck_mm": 91.71709278835785,
+      "base_z_mm": 75.164,
+      "foot_x_mm": 151.0,
+      "rake": 0.44,
+      "solid_slab": true,
+      "note": "U-arch aesthetic window removed; camera roof clearance at deck level is unchanged"
+    }
+  },
+  "review_previews": {
+    "front34": "tokimi_rover_top_cover_supercar_v3_195x100mm_front34.png",
+    "rear34": "tokimi_rover_top_cover_supercar_v3_195x100mm_rear34.png",
+    "side": "tokimi_rover_top_cover_supercar_v3_195x100mm_side.png",
+    "tower_detail": "tokimi_rover_top_cover_supercar_v3_195x100mm_tower_detail.png"
+  }
+}

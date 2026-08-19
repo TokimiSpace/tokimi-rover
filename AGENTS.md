@@ -123,16 +123,35 @@ Use these labels where certainty matters:
 
 Historical `HARDWARE-CONFIRMED` means prior reporting, measurement, photographs, or demonstration. It does not mean the 2026-08-19 repository audit repeated the test.
 
-## 10. Open-source and release hygiene
+## 10. CAD evidence boundary
+
+- The owner-selected top-cover release is
+  `hardware/cad/top-cover-v3/`: procedural Blender source, editable BLEND,
+  3MF/STL/OBJ, an A4 1:1 fit-check template, and software validation evidence.
+- Published V3 uses 195 × 100 mm M3 centers. The historical physical record in
+  `HARDWARE_AS_BUILT.md` says approximately 203 × 105 mm. Do not rewrite either
+  value or claim V3 physically fits until the current chassis and printed
+  template are measured.
+- A closed/oriented mesh and passing software assertions are not proof of
+  material suitability, support-free printing, dimensional accuracy, or safe
+  integration.
+- Keep machine-specific paths and private correspondence out of CAD artifacts.
+  Run `python3 scripts/check_cad_release.py` after changing the package and
+  update `MANIFEST.sha256` only for intentionally reviewed artifact changes.
+
+## 11. Open-source and release hygiene
 
 - The approved multi-license scope in `LICENSES.md` is active. Preserve its Apache-2.0, CERN-OHL-W-2.0, and CC-BY-4.0 boundaries; do not relicense material without explicit owner approval.
 - Keep Tokimi trademarks and logos separate from software, hardware, and documentation licensing.
-- Do not commit `.pio/`, binaries, secrets, local configuration, private media, or undocumented third-party assets.
+- Do not commit `.pio/`, generated firmware binaries, secrets, local
+  configuration, private media, or undocumented third-party assets. Reviewed
+  hardware release artifacts are allowed only with provenance, license
+  sidecars, and manifest coverage.
 - Preserve editable hardware/design sources alongside exports when rights permit publication.
 - Do not invent commit provenance. Use `docs/ARCHIVE_PROVENANCE.md` and bind future artifacts to an actual tag/commit and hashes.
 - Do not mark physical, licensing, test, or release checklist items complete without evidence.
 
-## 11. Completion checklist for changes
+## 12. Completion checklist for changes
 
 - [ ] Required source-of-truth files were read.
 - [ ] Code/document/hardware conflicts were stated before resolution.

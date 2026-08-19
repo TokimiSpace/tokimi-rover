@@ -22,6 +22,7 @@ firmware/LICENSE.md
 docs/LICENSE.md
 hardware/LICENSE.md
 scripts/LICENSE.md
+scripts/check_cad_release.py
 .github/LICENSE.md
 docs/CURRENT_IMPLEMENTATION.md
 docs/CURRENT_PINMAP.md
@@ -68,5 +69,7 @@ for name, wanted in expected.items():
     if actual != wanted:
         raise SystemExit(f"modified or unexpected official license text: {name}")
 PY
+
+python3 scripts/check_cad_release.py
 
 echo "repository structure check passed"

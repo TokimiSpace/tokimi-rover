@@ -99,7 +99,19 @@ Power is historically documented as parallel distribution; only data is daisy-ch
 
 ### 4.5 Custom enclosure
 
-The original two acrylic chassis plates were retained. A curved printed top cover was reported as built and fitted, with an OLED opening, camera area, lighting integration, ventilation, and M3 mounting to existing standoffs. Exact material, print settings, mass, and final fit measurements remain open.
+The original two acrylic chassis plates were retained. A curved top cover was
+historically reported as printed and fitted, with an OLED opening, camera area,
+lighting integration, ventilation, and M3 mounting to existing standoffs. That
+physical record gives approximately 203 × 105 mm hole centers.
+
+The project owner separately selected and authorized publication of the
+[Supercar V3 CAD package](hardware/cad/top-cover-v3/README.md), which uses
+195 × 100 mm centers and includes a procedural Blender source chain, editable
+BLEND, 3MF/STL/OBJ exports, and an A4 1:1 paper template. The 2026-08-19 audit
+software-checked its dimensions and closed mesh, but did not establish that it
+is the same cover as the historical printed part or physically fit it to the
+rover. Exact material, print settings, mass, and final fit measurements remain
+open.
 
 ### 4.6 Open technology and separate brand value
 
@@ -144,7 +156,8 @@ Complete details are in [Current implementation](docs/CURRENT_IMPLEMENTATION.md)
 
 - the rover was assembled and driven through its Wi-Fi interface;
 - the OLED and camera subsystem were integrated;
-- a custom top cover was printed;
+- a custom top cover was reported as printed; its identity and dimensions have
+  not been reconciled with the published Supercar V3 design;
 - sustained four-motor use produced a failure consistent with TB6612 overload/thermal shutdown, followed by recovery after cooling.
 
 `AUDIT-NOT-PHYSICALLY-RETESTED`:
@@ -178,6 +191,7 @@ tokimi-rover/
 │   ├── rover-controller/
 │   └── camera-node/
 ├── hardware/
+│   └── cad/top-cover-v3/  # owner-selected V3 source, exports, template, evidence
 ├── docs/
 │   ├── CURRENT_IMPLEMENTATION.md
 │   ├── CURRENT_PINMAP.md
@@ -187,6 +201,7 @@ tokimi-rover/
 │   ├── RELEASE_CHECKLIST.md
 │   └── ARCHIVE_PROVENANCE.md
 └── scripts/
+    ├── check_cad_release.py
     ├── check_markdown_links.py
     └── check_repository.sh
 ```

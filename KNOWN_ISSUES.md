@@ -84,6 +84,15 @@
 - **Impact:** excess voltage can increase current, heating, brush/gear stress, and driver load. PWM reduces average duty but not pulse amplitude.
 - **Required action:** verify exact motor model and adopt an appropriate supply/regulator or explicitly rated motors.
 
+### KR-024 — Published V3 CAD spacing conflicts with the historical cover record
+
+- **Severity:** High
+- **Status:** Open; owner-selected artifact, audit not physically retested
+- **Conflict:** the historical as-built document records approximately 203 × 105 mm M3 centers, while the published Supercar V3 model and A4 template use 195 × 100 mm.
+- **Impact:** assuming either set is correct can waste a print or cause unsafe drilling, forced mounting, cracked parts, or interference with the rover's electronics.
+- **Software evidence:** the V3 3MF/STL topology, 260 × 155 mm plan, 195 × 100 mm centers, and Ø3.5 mm holes pass repository checks. This does not prove chassis fit, material choice, support strategy, or print accuracy.
+- **Required action:** print the A4 sheet at Actual Size, verify its 100 mm calibration line, measure the current chassis, compare all four centers, and record dated photos/measurements before manufacturing or marking the issue resolved.
+
 ## Medium and low issues
 
 ### KR-004 — Camera latency, frame rate, and one-buffer contention

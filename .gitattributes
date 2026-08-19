@@ -9,6 +9,8 @@
 *.gif binary
 *.webp binary
 *.pdf binary
+*.3mf binary
+*.blend binary
 *.stl binary
 *.glb binary
 *.zip binary

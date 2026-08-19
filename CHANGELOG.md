@@ -16,6 +16,9 @@ All notable project changes will be recorded here.
   architecture diagram for the project overview.
 - Documentation links to the separately maintained bilingual
   [Tokimi Open Source](https://tokimispace.github.io/) organization page.
+- Owner-selected Supercar V3 procedural/editable top-cover source, 3MF/STL/OBJ
+  exports, A4 1:1 fit-check template, clean renders, validation data, checksums,
+  and a repository CAD integrity checker.
 
 ### Changed
 
@@ -33,3 +36,5 @@ All notable project changes will be recorded here.
 - V0.1 motor-stop ordering, watchdog latency, direction reversal, and 80% PWM cap require safety work.
 - Camera runtime health and restart authorization require hardening.
 - Physical power, thermal, antenna, endurance, and battery measurements remain incomplete.
+- Published V3 uses 195 × 100 mm mounting centers while the historical physical
+  record says approximately 203 × 105 mm; physical reconciliation remains open.
